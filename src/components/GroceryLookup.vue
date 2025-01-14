@@ -51,7 +51,7 @@ const submitGroceryLookup = async (lookup: string) => {
   };
 
   try {
-    const response = await axios.post(apiUrl, requestBody, { headers: { "x-api-key": import.meta.env.ETILBUDSAVIS_APIKEY } });
+    const response = await axios.post(apiUrl, requestBody, { headers: { "x-api-key": import.meta.env.VITE_ETILBUDSAVIS_APIKEY } });
     result.value = response.data;
   } catch (err: any) {
     error.value = err.response?.data?.message || 'An error occurred.';
